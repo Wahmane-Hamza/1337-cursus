@@ -6,18 +6,18 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:00:55 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/22 11:48:29 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/23 12:55:49 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h> 
 
-int	ft_isalpha(int c)
+static int	ft_isalpha(int c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
 
-int	ft_isdigit(int c)
+static int	ft_isdigit(int c)
 {
 	return ((c >= '0' && c <= '9'));
 }
