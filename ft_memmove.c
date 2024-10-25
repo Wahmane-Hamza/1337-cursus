@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 07:26:51 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/24 11:40:46 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:57:21 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int		i;
 	char	*dst2;
 	char	*src2;
 
@@ -22,12 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (NULL);
 	dst2 = (char *)dst;
 	src2 = (char *)src;
-	i = len - 1;
-	while (i >= 0)
-	{
-		dst2[i] = src2[i];
-		i--;
-	}
+	while (len--)
+		dst2[len] = src2[len];
 	return (dst);
 }
 
@@ -43,7 +38,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 // 		i++;
 // 	}
 
-// 	ft_memmove(p2,NULL,3);
+// 	ft_memmove(p2,p1,3);
 // 	printf("\n");
 
 // 	int j = 0;
