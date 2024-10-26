@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:18:20 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/25 16:44:36 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/26 09:05:37 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,22 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	if (!s)
 		return (NULL);
-	c2 = c;
+	c2 = (unsigned char)c;
 	i = 0;
-	str = s;
+	str = (const unsigned char *)s;
 	while (i < n)
 	{
 		if (str[i] == c2)
 			return ((void *)&str[i]);
 		i++;
 	}
-	if (c == '\0')
-		return ((void *)&str[i]);
 	return (NULL);
 }
 
 // int main() {
-// 	printf("%s\n",ft_memchr("Hello world",'o',5));
+// 	char str[] = "Hello world";
+// 	char ptr = '\0';
+// 	printf("%s\n",memchr(str,ptr,11));
+// 	printf("%p\n%p\n",&str[11],memchr(str,ptr,11));
 // 	return 0;
 // }
