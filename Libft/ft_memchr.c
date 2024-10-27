@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:18:20 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/26 09:05:37 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:01:38 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libc.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
