@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:08:19 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/24 16:12:07 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 13:56:33 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
 	unsigned char	r;
 
