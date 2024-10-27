@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:35:16 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 08:53:58 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 11:31:39 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int					i;
-	unsigned long int	k;
-	int					sign;
+	int	i;
+	int	k;
+	int	sign;
 
 	i = 0;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
@@ -37,14 +37,14 @@ int	ft_atoi(const char *str)
 	return (k * sign);
 }
 
-// int main(int ac,char **av)
-// {
-//     int i = 1;
-//     while (i < ac)
-//     {
-//         // printf("%s\n",av[i]);
-//         printf("%d\n",ft_atoi(av[i]));
-//         printf("%d\n",atoi(av[i]));
-//         i++;
-//     }
-// }
+int main(int ac,char **av)
+{
+    int i = 1;
+    while (i < ac)
+    {
+        // printf("%s\n",av[i]);
+        printf("%d\n",ft_atoi(av[i]));
+        printf("%d\n",atoi(av[i]));
+        i++;
+    }
+}
