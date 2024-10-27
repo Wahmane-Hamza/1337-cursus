@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:18:47 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/26 09:05:54 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:02:12 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libc.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
