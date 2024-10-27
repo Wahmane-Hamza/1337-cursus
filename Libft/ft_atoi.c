@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:35:16 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 07:18:36 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 08:53:58 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	k;
-	int	sign;
+	int					i;
+	unsigned long int	k;
+	int					sign;
 
 	i = 0;
 	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
