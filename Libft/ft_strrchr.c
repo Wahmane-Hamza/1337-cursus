@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 14:01:34 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/25 15:18:10 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:02:19 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libc.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
