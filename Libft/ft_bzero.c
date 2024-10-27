@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 08:25:52 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/24 11:36:24 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 10:02:20 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 static void	*ft_memset(void *str, int c, size_t n)
 {
 	char			*ptr;
-	unsigned int	uc;
+	unsigned char	uc;
 	size_t			i;
 
 	if (!str)
@@ -38,7 +38,7 @@ void	ft_bzero(void *s, size_t n)
 //     // Test 1: Standard case
 //     char test1[10] = "123456789";
 //     printf("Before ft_bzero: %s\n", test1);
-//     ft_bzero(NULL, 5);
+//     ft_bzero(test1, 5);
 //     printf("After ft_bzero :");
 //     int i = 0;
 // 	while(i < 10)
