@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:35:16 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 11:31:39 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:01:00 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libc.h"
 
 int	ft_atoi(const char *str)
 {
@@ -37,14 +37,14 @@ int	ft_atoi(const char *str)
 	return (k * sign);
 }
 
-int main(int ac,char **av)
-{
-    int i = 1;
-    while (i < ac)
-    {
-        // printf("%s\n",av[i]);
-        printf("%d\n",ft_atoi(av[i]));
-        printf("%d\n",atoi(av[i]));
-        i++;
-    }
-}
+// int main(int ac,char **av)
+// {
+//     int i = 1;
+//     while (i < ac)
+//     {
+//         // printf("%s\n",av[i]);
+//         printf("%d\n",ft_atoi(av[i]));
+//         printf("%d\n",atoi(av[i]));
+//         i++;
+//     }
+// }
