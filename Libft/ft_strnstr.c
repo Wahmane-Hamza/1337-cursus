@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:28:50 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/26 12:39:48 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:02:15 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libc.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
