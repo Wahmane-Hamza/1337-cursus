@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:06:27 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/26 09:15:40 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:01:41 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libc.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
