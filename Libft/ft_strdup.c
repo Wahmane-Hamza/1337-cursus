@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 10:41:25 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 11:25:51 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:02:00 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libc.h"
 
 static size_t	ft_strlen(const char *s)
 {
