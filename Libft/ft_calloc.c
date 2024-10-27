@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 08:27:13 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 10:34:12 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:01:15 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libc.h"
 
 static void	*ft_memset(void *str, int c, size_t n)
 {
