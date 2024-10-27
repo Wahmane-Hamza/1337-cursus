@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 07:26:51 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/24 15:57:21 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:01:52 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libc.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
