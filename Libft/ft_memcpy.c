@@ -6,12 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 12:56:56 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/24 11:37:36 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:01:49 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libc.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
