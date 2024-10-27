@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:28:38 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/24 16:07:39 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:02:25 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libc.h"
 
 int	ft_toupper(int c)
 {
