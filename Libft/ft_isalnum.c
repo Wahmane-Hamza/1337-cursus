@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:00:55 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/23 12:55:49 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/27 14:01:21 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h> 
+#include "libc.h"
 
 static int	ft_isalpha(int c)
 {
