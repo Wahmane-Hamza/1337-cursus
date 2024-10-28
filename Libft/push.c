@@ -2,6 +2,7 @@
 
 int main(int ac, char **av)
 {
+    if (ac )
     char *add;
     char *commit;
 
