@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 08:27:13 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 14:01:15 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/29 11:46:02 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 static void	*ft_memset(void *str, int c, size_t n)
 {
@@ -37,7 +37,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	sz = count * size;
 	ptr = malloc(sz);
-	if (ptr == NULL)
+	if (!ptr)
 		return (NULL);
 	ft_memset (ptr, 0, sz);
 	return (ptr);
