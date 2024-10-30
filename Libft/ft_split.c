@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 07:22:26 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/29 20:13:11 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:06:15 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	count_word(char const *s, char c)
 
 static char	**free_array(char **array, int j)
 {
-	while (j > 0)
+	while (j >= 0)
 	{
 		free(array[--j]);
 	}
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 	char	**array;
 	int		i;
 
-	if(!s)
+	if (!s)
 		return (NULL);
 	array = malloc((count_word(s, c) + 1) * sizeof(char *));
 	if (!array)
@@ -80,86 +80,3 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	return (fill_array(s, c, array, i));
 }
-
-// int main()
-// {
-// 	char **s1= ft_split(" hello world hi fv jjjjjj ghj  ",' ');
-// 	printf("%s",s1[6]);
-// 	free(s1);
-// }
-
-// int main()
-// {
-//     char **result;
-//     int i;
-
-//     // Test 1: Normal case
-//     result = ft_split("hello world hi fv jjjjjj ghj", ' ');
-//     if (result)
-//     {
-//         for (i = 0; result[i] != NULL; i++)
-//         {
-//             printf("result[%d]: '%s'\n", i, result[i]);
-//             free(result[i]);
-//         }
-//         free(result);
-//     }
-
-//     // Test 2: Empty string
-//     result = ft_split("", ' ');
-//     if (result)
-//     {
-//         for (i = 0; result[i] != NULL; i++)
-//         {
-//             printf("result[%d]: '%s'\n", i, result[i]);
-//             free(result[i]);
-//         }
-//         free(result);
-//     }
-
-//     // Test 3: String with only delimiters
-//     result = ft_split("     ", ' ');
-//     if (result)
-//     {
-//         for (i = 0; result[i] != NULL; i++)
-//         {
-//             printf("result[%d]: '%s'\n", i, result[i]);
-//             free(result[i]);
-//         }
-//         free(result);
-//     }
-
-//     // Test 4: String with no delimiters
-//     result = ft_split("helloworld", ' ');
-//     if (result)
-//     {
-//         for (i = 0; result[i] != NULL; i++)
-//         {
-//             printf("result[%d]: '%s'\n", i, result[i]);
-//             free(result[i]);
-//         }
-//         free(result);
-//     }
-
-//     // Test 5: NULL string
-//     result = ft_split(NULL, ' ');
-//     if (result)
-//     {
-//         printf("result: '%s'\n", *result);
-//         free(result);
-//     }
-
-//     // Test 6: Delimiter not in string
-//     result = ft_split("hello,world", ' ');
-//     if (result)
-//     {
-//         for (i = 0; result[i] != NULL; i++)
-//         {
-//             printf("result[%d]: '%s'\n", i, result[i]);
-//             free(result[i]);
-//         }
-//         free(result);
-//     }
-
-//     return 0;
-// }
