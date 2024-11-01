@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 18:52:54 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/01 19:14:16 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/01 21:25:25 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_lstsize(t_list *lst)
 {
-    char    *nx;
+    t_list    *nx;
     int count;
 
     count = 0;
@@ -34,4 +34,10 @@ int main()
 
     t_list *node1 = ft_lstnew("node 1");
     t_list *node2 = ft_lstnew("node 2");
+    t_list *node3 = ft_lstnew("node 3");
+
+    ft_lstadd_front(&list,node1);
+    ft_lstadd_front(&list,node2);
+    ft_lstadd_front(&list,node3);
+    printf("%d",ft_lstsize(list));
 }
