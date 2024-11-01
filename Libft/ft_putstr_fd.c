@@ -6,13 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:14:26 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/31 20:41:06 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/01 10:18:25 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
-#include <fcntl.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
