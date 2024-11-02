@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:25:45 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/01 13:48:39 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/02 17:45:38 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_list	*ft_lstnew(void *content)
 	ptr = (t_list *)malloc(sizeof(t_list));
 	if (!ptr)
 		return (NULL);
-	ptr->content = content;
+	ptr->content = (void *)ft_strdup(content);
 	ptr->next = NULL;
 	return (ptr);
 }
