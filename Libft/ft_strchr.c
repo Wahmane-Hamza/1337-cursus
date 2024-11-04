@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:26:05 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 10:09:41 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:25:56 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	c2;
-	int		i;
+	unsigned char	c2;
+	int				i;
 
-	if (!s)
-		return (NULL);
-	c2 = c;
+	c2 = (unsigned char)c;
 	i = 0;
 	while (s[i])
 	{
