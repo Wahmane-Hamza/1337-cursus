@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:28:38 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 14:02:25 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:11:58 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 int	ft_toupper(int c)
 {
@@ -21,8 +21,3 @@ int	ft_toupper(int c)
 		r -= 32;
 	return (r);
 }
-
-// int main()
-// {
-// 	printf("%c" , ft_toupper('@'));
-// }
