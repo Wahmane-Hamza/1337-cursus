@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:18:47 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 14:02:12 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:11:04 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -27,10 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// int main()
-// {
-//     char str1[] = "abcde";
-//     char str2[] = "abcd";
-//     printf("%d",ft_strncmp(str1,str2,5));
-// }
