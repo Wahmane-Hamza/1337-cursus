@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:58:50 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 10:09:02 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:42:06 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,10 @@ void	*ft_memset(void *str, int c, size_t n)
 
 	if (!str)
 		return (NULL);
-	ptr = (char *)str;
-	uc = (char )c;
+	ptr = (unsigned char *)str;
+	uc = (unsigned char)c;
 	i = 0;
 	while (i < n)
 		ptr[i++] = uc;
-	ptr[i] = '\0';
 	return (str);
 }
