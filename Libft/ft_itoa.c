@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:06:47 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 10:07:48 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:29:25 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,3 @@ char	*ft_itoa(int n)
 	int_cpy(ptr, len, sign, num);
 	return (ptr);
 }
- 
