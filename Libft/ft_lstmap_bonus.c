@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 10:50:22 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 10:08:16 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 12:17:18 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstclear(&node, del);
 			return (NULL);
 		}
-		ft_lstadd_front(&new_list, node);
+		ft_lstadd_back(&new_list, node);
 		lst = lst->next;
 	}
 	return (new_list);
