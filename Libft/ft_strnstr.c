@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:28:50 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 14:02:15 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:11:11 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -30,12 +30,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-//     char hay[] = "sdsfds hamz";
-//     char need[] = "hamza";
-//     char *res ;
-//     res = ft_strnstr(hay,need,12);
-//     printf("%s\n",res);
-// }
