@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:28:38 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 10:11:58 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:24:33 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_toupper(int c)
 {
-	unsigned char	r;
-
-	r = c;
-	if (r >= 'a' && r <= 'z')
-		r -= 32;
-	return (r);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
