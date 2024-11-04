@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 14:01:34 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 14:02:19 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:11:20 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -33,8 +33,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-// int main() {
-// 	printf("%s\n",ft_strrchr("Hello world",'o'));
-// 	return 0;
-// }
