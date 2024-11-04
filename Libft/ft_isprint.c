@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:57:50 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 14:01:35 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:07:35 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
