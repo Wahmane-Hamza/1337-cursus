@@ -6,12 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:06:47 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/30 15:02:50 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:07:48 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
 static int	len_num(unsigned int n)
 {
@@ -68,10 +67,4 @@ char	*ft_itoa(int n)
 	int_cpy(ptr, len, sign, num);
 	return (ptr);
 }
-
-// int main()
-// {
-// 	char    *p = ft_itoa(2147483648);
-// 	printf("%s",p);
-// 	free(p);
-// }   
+ 
