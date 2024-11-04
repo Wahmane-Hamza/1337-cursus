@@ -6,23 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:45:12 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 18:42:51 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:10:44 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
-
-static size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -45,13 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[k + i] = 0;
 	return (k + j);
 }
-
-// int main()
-// {
-// 	char src[] = "hello";
-// 	char dst[] = "123456789123459";
-// 	printf("before :%s \n",dst);
-// 	ft_strlcat(dst,src,3);
-// 	printf("after :%s \n",dst);
-
-// }
