@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 07:22:26 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 18:24:05 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 18:27:36 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,45 +43,40 @@ static char	**free_array(char **array, int j)
 	return (NULL);
 }
 
-static char	**fill_array(char const *s, char c, char **array, int i)
+static char	**fill_array(char **arr, const char *s, char c)
 {
-	int		k;
-	int		j;
-	char	*elem;
+	int		current;
+	int		start;
+	int		count;
 
-	j = 0;
-	while (s[i])
+	current = 0;
+	count = 0;
+	while (s[current])
 	{
-		k = 0;
-		while (s[i] != c && s[i] != '\0')
-		{
-			k++;
-			i++;
-		}
-		if (k > 0)
-		{
-			elem = ft_substr(s, i - k, k);
-			if (!elem)
-				return (free_array(array, j));
-			array[j++] = elem;
-		}
-		if (s[i] != '\0')
-			i++;
+		while (s[current] == c)
+			current++;
+		if (s[current] == '\0')
+			break ;
+		start = current;
+		while (s[current] && s[current] != c)
+			current++;
+		arr[count] = ft_substr(s, start, current - start);
+		if (arr[count] == NULL)
+			return (free_array(arr, count));
+		count++;
 	}
-	array[j] = NULL;
-	return (array);
+	arr[count] = NULL;
+	return (arr);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
-	int		i;
 
 	if (!s)
 		return (NULL);
 	array = (char **)malloc((count_word(s, c) + 1) * sizeof(char *));
 	if (!array)
 		return (NULL);
-	i = 0;
-	return (fill_array(s, c, array, i));
+	return (fill_array(array, s, c));
 }
