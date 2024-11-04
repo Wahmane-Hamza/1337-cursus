@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 07:22:26 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 18:18:34 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 18:24:05 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,23 @@
 
 static int	count_word(char const *s, char c)
 {
-	int	num_strings;
-	int	i;
+	size_t	i;
+	size_t	count;
 
 	i = 0;
-	num_strings = 0;
+	count = 0;
 	while (s[i])
 	{
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
-			num_strings++;
-		i++;
+		while (s[i] == c)
+			i++;
+		if (s[i] && s[i] != c)
+		{
+			count++;
+			while (s[i] && s[i] != c)
+				i++;
+		}
 	}
-	return (num_strings);
+	return (count);
 }
 
 static char	**free_array(char **array, int j)
@@ -38,30 +43,33 @@ static char	**free_array(char **array, int j)
 	return (NULL);
 }
 
-static char	**fill_array(char **arr, const char *s, char c)
+static char	**fill_array(char const *s, char c, char **array, int i)
 {
-	int		current;
-	int		start;
-	int		count;
+	int		k;
+	int		j;
+	char	*elem;
 
-	current = 0;
-	count = 0;
-	while (s[current])
+	j = 0;
+	while (s[i])
 	{
-		while (s[current] == c)
-			current++;
-		if (s[current] == '\0')
-			break ;
-		start = current;
-		while (s[current] && s[current] != c)
-			current++;
-		arr[count] = ft_substr(s, start, current - start);
-		if (arr[count] == NULL)
-			return (ft_freearray(arr, count));
-		count++;
+		k = 0;
+		while (s[i] != c && s[i] != '\0')
+		{
+			k++;
+			i++;
+		}
+		if (k > 0)
+		{
+			elem = ft_substr(s, i - k, k);
+			if (!elem)
+				return (free_array(array, j));
+			array[j++] = elem;
+		}
+		if (s[i] != '\0')
+			i++;
 	}
-	arr[count] = NULL;
-	return (arr);
+	array[j] = NULL;
+	return (array);
 }
 
 char	**ft_split(char const *s, char c)
@@ -75,5 +83,5 @@ char	**ft_split(char const *s, char c)
 	if (!array)
 		return (NULL);
 	i = 0;
-	return (fill_array(array, s, c));
+	return (fill_array(s, c, array, i));
 }
