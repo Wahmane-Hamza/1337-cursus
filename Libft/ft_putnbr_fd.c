@@ -6,17 +6,27 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 10:11:38 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/01 10:25:41 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:05:09 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*num;
-
-	num = ft_itoa(n);
-	ft_putstr_fd(num, fd);
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else
+	{
+		if (n < 0)
+		{
+			ft_putchar_fd('-', fd);
+			n = n * -1;
+		}
+		if (n >= 9)
+		{
+			ft_putnbr_fd(n / 10, fd);
+		}
+		ft_putchar_fd((n % 10) + '0', fd);
+	}
 }
