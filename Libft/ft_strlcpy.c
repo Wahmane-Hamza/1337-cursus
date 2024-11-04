@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 07:27:43 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 14:02:06 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:10:53 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -33,13 +33,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (j);
 }
-
-// int main()
-// {
-// 	char src[] = "hello";
-// 	char dst[10] = "";
-// 	printf("before :%s \n",dst);
-// 	strlcpy(dst,src,sizeof(dst));
-// 	printf("after :%s \n",dst);
-
-// }
