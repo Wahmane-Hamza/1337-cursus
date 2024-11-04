@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:03:17 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 13:05:05 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:10:09 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-
 	char			*ptr;
 	size_t			src_len;
 	size_t			substr_len;
