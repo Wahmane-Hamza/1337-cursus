@@ -6,11 +6,11 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 12:56:56 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/27 14:01:49 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:08:46 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libc.h"
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -30,26 +30,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-// int main()
-// {
-// 	int p1[10] = {1,2,3,4,5,6};
-// 	int *p2 = p1+2;
-
-// 	int i = 0;
-// 	while (i < 4)
-// 	{
-// 		printf("%d",p2[i]);
-// 		i++;
-// 	}
-
-// 	ft_memcpy(p2,p1,0);
-// 	printf("\n");
-
-// 	int j = 0;
-// 	while (j < 4)
-// 	{
-// 		printf("%d",p2[j]);
-// 		j++;
-// 	}
-// }
