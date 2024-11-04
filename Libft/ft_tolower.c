@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:08:19 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 10:11:50 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:24:52 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	ft_tolower(int c)
 {
-	unsigned char	r;
-
-	r = c;
-	if (r >= 'A' && r <= 'Z')
-		r += 32;
-	return (r);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
