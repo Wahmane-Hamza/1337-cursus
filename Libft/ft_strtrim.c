@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 09:25:03 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/10/29 07:21:16 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:11:32 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(ptr, &s1[start], len + 1);
 	return (ptr);
 }
-
-// int main()
-// {
-//     printf("%s", ft_strtrim("abcdeab","ab"));
-// }
