@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:45:12 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 12:12:25 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 12:19:54 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	s;
 	size_t	d;
 
-	if (!src || !dst)
-		return (NULL);
 	s = ft_strlen(src);
 	d = ft_strlen(dst);
 	if (dstsize == 0)
