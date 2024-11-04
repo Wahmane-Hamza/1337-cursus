@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 14:03:17 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 10:11:43 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/04 12:56:06 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	i = 0;
-	if (s[i] == '\0' || start >= ft_strlen(s) || len == 0)
+	if (start >= ft_strlen(s))
 	{
 		len = 0;
 	}
