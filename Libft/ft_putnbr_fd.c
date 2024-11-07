@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 10:11:38 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 11:43:36 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:15:51 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,9 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd((n % 10) + '0', fd);
 	}
 }
+
+// int main()
+// {
+// 	char fd = open("nber.txt",O_WRONLY | O_RDONLY | O_CREAT , 0777);
+// 	ft_putnbr_fd(123456789,fd);
+// }
