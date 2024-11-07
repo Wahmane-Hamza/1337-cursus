@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:45:12 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 12:19:54 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:58:45 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[d + i] = '\0';
 	return (d + s);
 }
+
+// int main()
+// {
+// 	char src[] = "hello world";
+// 	char dst[20] = "hi ";
+// 	ft_strlcat(dst, src ,sizeof(dst));
+// 	printf("%s", dst);
+// }
