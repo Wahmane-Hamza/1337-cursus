@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:58:50 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 13:14:20 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:13:02 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,10 @@ void	*ft_memset(void *str, int c, size_t n)
 		ptr[i++] = uc;
 	return (str);
 }
+
+// int main()
+// {
+// 	int a[] ={42,81};
+// 	char *p = (char *)&a;
+	
+// }
