@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 14:01:34 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 13:31:40 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:11:32 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,8 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+// 	printf("%s",ft_strrchr("hello",'e'));
+// }
