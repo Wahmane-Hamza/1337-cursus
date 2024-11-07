@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:28:38 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 13:24:33 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:06:41 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,9 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
+
+// int main()
+// {
+// 	char s='j';
+// 	printf("%c",ft_toupper(s));
+// }
