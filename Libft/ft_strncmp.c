@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:18:47 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 13:22:49 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:30:11 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
+
+// int main()
+// {
+// 	printf("%d",ft_strncmp("abcdd","abcd",5));
+// }
