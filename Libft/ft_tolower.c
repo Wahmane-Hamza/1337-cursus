@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 16:08:19 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/06 15:21:42 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/06 16:07:21 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,9 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
+
+// int main()
+// {
+// 	char s='H';
+// 	printf("%c",ft_tolower(s));
+// }
