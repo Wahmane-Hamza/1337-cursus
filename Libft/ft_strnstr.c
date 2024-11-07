@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:28:50 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 12:29:52 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:23:35 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+// 	printf("%s\n", ft_strnstr("hello world","w",13));
+// }
