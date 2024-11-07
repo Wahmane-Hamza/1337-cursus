@@ -6,11 +6,12 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:14:26 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/01 10:18:25 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:10:59 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+ 
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -25,3 +26,4 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
+
