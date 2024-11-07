@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 07:22:26 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 18:35:50 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 14:09:41 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,3 +81,14 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	return (fill_array(s, c, array, i));
 }
+
+// int main()
+// {
+// 	 char **ptr = ft_split("hello world i'm me and he is him", ' ');
+// 	 printf("%s\n" ,ptr[0]);
+// 	 printf("%s\n" ,ptr[1]);
+// 	 printf("%s\n" ,ptr[2]);
+// 	 printf("%s\n" ,ptr[7]);
+// 	 printf("%s\n" ,ptr[8]);
+// 	 free(ptr);
+// }
