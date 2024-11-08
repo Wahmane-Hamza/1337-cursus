@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 16:28:02 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 12:21:44 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:38:26 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,18 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		last->next = new;
 	}
 }
+
+// int main()
+// {
+// 	t_list *node1 = ft_lstnew(ft_strdup("node1"));
+// 	t_list *node2 = ft_lstnew(ft_strdup("node2"));
+// 	t_list *node3 = ft_lstnew(ft_strdup("node3"));
+// 	t_list *node4 = ft_lstnew(ft_strdup("node4"));
+// 	ft_lstadd_back(&node1, node2);
+// 	ft_lstadd_back(&node1, node3);
+// 	ft_lstadd_back(&node1, node4);
+// 	printf("%s\n",node1->content);
+// 	printf("%s\n",node1->next->content);
+// 	printf("%s\n",node1->next->next->content);
+// 	printf("%s\n",node1->next->next->next->content);
+// }
