@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 13:35:16 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 10:05:32 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 18:09:49 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,8 @@ int	ft_atoi(const char *str)
 	}
 	return (k * sign);
 }
+
+// int main()
+// {
+// 	printf("%d",ft_atoi("    -123456789"));
+// }
