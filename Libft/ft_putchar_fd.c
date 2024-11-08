@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 16:54:05 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/07 15:24:43 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:30:37 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	if (fd != -1)
+		write(fd, &c, 1);
 }
 
 // int main()
