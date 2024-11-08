@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 15:45:11 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/07 10:59:54 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:33:13 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char		*ptr;
 	size_t		len;
 
-	if (!s1 || !s2)
-		return (NULL);
+	if (s1 && !s2)
+		return (ft_strdup(s1));
+	if (!s1 && s2)
+		return (ft_strdup(s2));
+	if (!s1 && !s2)
+		return (ft_strdup(""));
 	len = (ft_strlen(s1) + ft_strlen(s2)) + 1;
 	ptr = (char *)malloc(len);
 	if (!ptr)
