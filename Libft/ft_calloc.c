@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 08:27:13 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 10:06:56 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 19:53:26 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,15 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_memset (ptr, 0, sz);
 	return (ptr);
 }
+
+// int main()
+// {
+// 	char *ptr = (char *)ft_calloc(5,sizeof(char));
+// 	int i = 0;
+// 	while (i < 5)
+// 	{
+// 		if (ptr[i] == '\0')
+// 			printf("%c",'0');
+// 		i++;
+// 	}
+// } 
