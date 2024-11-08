@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 07:31:11 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 10:07:25 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 17:56:09 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,9 @@ int	ft_isalpha(int c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
+
+// int	main()
+// {
+// 	printf("%d\n",ft_isalpha('@'));
+// 	printf("%d\n",ft_isalpha('a'));
+// }
