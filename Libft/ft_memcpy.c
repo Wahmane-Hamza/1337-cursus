@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 12:56:56 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 12:27:08 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:55:26 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,12 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+// int main()
+// {
+// 	char s1[] = "hello world";
+// 	char *s2 = s1 + 3;
+// 	ft_memcpy(s2, s1, 5);
+// 	printf("dst :%s\n", s2);
+// 	printf("src :%s\n", s1);
+// }
