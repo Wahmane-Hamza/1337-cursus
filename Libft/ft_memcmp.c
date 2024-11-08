@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:06:27 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 10:08:36 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:00:30 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+// int main()
+// {
+// 	char s1[] = "abcd";
+// 	char s2[] = "abcdd";
+
+// 	printf("%d",ft_memcmp(s1 , s2 , 9));
+// }
