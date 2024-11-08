@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 16:18:20 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 13:15:46 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:04:41 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+// 	printf("%s", ft_memchr("hello world",'w',12));
+// }
