@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:14:26 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/07 15:08:25 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:37:46 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	if (!s)
+	if (!s || fd == -1)
 		return ;
 	while (s[i])
 	{
