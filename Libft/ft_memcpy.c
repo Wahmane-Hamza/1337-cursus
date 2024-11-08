@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 12:56:56 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/07 15:55:26 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:33:07 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	if (!dst && !src)
 		return (NULL);
+	if (dst == src)
+		return (dst);
 	dst2 = (unsigned char *)dst;
 	src2 = (const unsigned char *)src;
 	i = 0;
