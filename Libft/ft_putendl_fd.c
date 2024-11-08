@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 20:42:17 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 10:09:16 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 15:23:30 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,9 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
+
+// int main()
+// {
+// 	char fd = open("end.txt", O_WRONLY | O_RDONLY | O_CREAT, 0777);
+// 	ft_putendl_fd("HELLo WORLD", fd);
+// }
