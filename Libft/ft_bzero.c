@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 08:25:52 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 10:06:42 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 18:07:29 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,18 @@ void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
+
+// int main()
+// {
+// 	char a[] = "hello";
+
+// 	ft_bzero(a, 3);
+// 	int i = 0;
+// 	while (i < 5)
+// 	{
+// 		if (a[i] == '\0')
+// 			printf("%c",'0');
+// 		printf("%c",a[i]);
+// 		i++;
+// 	}
+// }
