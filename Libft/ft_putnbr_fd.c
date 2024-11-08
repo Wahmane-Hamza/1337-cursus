@@ -6,14 +6,17 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 10:11:38 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/07 15:15:51 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:36:16 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <fcntl.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	if (fd == -1)
+		return ;
 	if (n == -2147483648)
 		ft_putstr_fd("-2147483648", fd);
 	else
@@ -34,5 +37,5 @@ void	ft_putnbr_fd(int n, int fd)
 // int main()
 // {
 // 	char fd = open("nber.txt",O_WRONLY | O_RDONLY | O_CREAT , 0777);
-// 	ft_putnbr_fd(123456789,fd);
+// 	ft_putnbr_fd(123456,fd);
 // }
