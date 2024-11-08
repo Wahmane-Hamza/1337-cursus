@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 10:50:22 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/04 17:59:12 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:42:53 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,29 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
+
+// void *f(void *s)
+// {
+// 	return (ft_strdup(s));
+// }
+// void del(void *s)
+// {
+// 	free(s);
+// }
+// int main()
+// {
+// 	t_list *list = NULL;
+// 	t_list *node1 = ft_lstnew(ft_strdup("node1"));
+// 	t_list *node2 = ft_lstnew(ft_strdup("node2"));
+// 	t_list *node3 = ft_lstnew(ft_strdup("node3"));
+// 	t_list *node4 = ft_lstnew(ft_strdup("node4"));
+// 	ft_lstadd_back(&list,node1);
+// 	ft_lstadd_back(&list,node2);
+// 	ft_lstadd_back(&list,node3);
+// 	ft_lstadd_back(&list,node4);
+// 	t_list *new = ft_lstmap(list,f,del);
+// 	printf("%s\n",new->content);
+// 	printf("%s\n",new->next->content);
+// 	printf("%s\n",new->next->next->content);
+// 	printf("%s\n",new->next->next->next->content);
+// }
