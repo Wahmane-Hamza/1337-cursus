@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 10:17:20 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/07 17:00:05 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/09 19:07:25 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst)
+	if (lst && f)
 	{
 		while (lst)
 		{
