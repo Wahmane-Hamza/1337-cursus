@@ -25,11 +25,14 @@ all: ${NAME}
 ${NAME}: ${OBJ}
 	${LIBC} ${NAME} ${OBJ}
 
-%.o: %.c
-	${CC} ${CFLAGS} -c $< -o $@
+$(OBJ) : $(SRC)
+	${CC} $(CFLAGS) -c $(SRC)
 
-bonus: ${NAME} ${OBJB}
-	${LIBC} ${NAME} ${OBJB}
+bonus : $(OBJB)
+
+$(OBJB) : $(SRCB)
+	${CC} $(CFLAGS) -c $(SRCB)
+	${LIBC} $(NAME) $(OBJB)
 
 clean:
 	${RM} ${OBJ} ${OBJB}
@@ -39,4 +42,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY : all bonus clean fclean re
+.PHONY : clean
