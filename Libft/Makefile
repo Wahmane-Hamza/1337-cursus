@@ -38,7 +38,7 @@ clean:
 	${RM} ${OBJ} ${OBJB}
 
 fclean: clean
-	${RM} ${NAME} ${bonus}
+	${RM} ${NAME}
 
 re: fclean all
 
