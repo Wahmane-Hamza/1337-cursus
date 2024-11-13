@@ -33,8 +33,8 @@ t_list	*ft_lstlast(t_list *lst)
 // {
 // 	t_list *list = NULL;
 // 	t_list *node1 = ft_lstnew(ft_strdup("node1"));
-// 	t_list *node2 = ft_lstnew(ft_strdup("node2"));
-// 	t_list *node3 = ft_lstnew(ft_strdup("node3"));
+	// t_list *node2 = ft_lstnew(ft_strdup("node2"));
+	// t_list *node3 = ft_lstnew(ft_strdup("node3"));
 // 	t_list *node4 = ft_lstnew(ft_strdup("node4"));
 // 	ft_lstadd_back(&list,node1);
 // 	ft_lstadd_back(&list,node2);
