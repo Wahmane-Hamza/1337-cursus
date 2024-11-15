@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 07:22:26 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/11/10 17:52:28 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/11/15 13:10:07 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ char	**ft_split(char const *s, char c)
 
 // int main()
 // {
-// 	 char **ptr = ft_split("hello world i'm here for testing split", ' ');
+// 	 char **ptr = ft_split("hello world i'm here for testing split", '-');
 // 	 if (ptr == NULL)
 // 	 {
 // 		printf("(null)");
@@ -92,7 +92,5 @@ char	**ft_split(char const *s, char c)
 // 	 }
 // 	 printf("%s\n" ,ptr[0]);
 // 	 printf("%s\n" ,ptr[1]);
-// 	 printf("%s\n" ,ptr[2]);
-// 	 printf("%s\n" ,ptr[7]);
 // 	 free(ptr);
 // }
