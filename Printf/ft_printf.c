@@ -6,13 +6,13 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 11:47:22 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/05 15:08:21 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/05 18:12:22 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int  ft_print_form(char spec,va_list vf)
+static int	ft_print_form(char spec, va_list vf)
 {
 	int	count;
 
@@ -31,18 +31,19 @@ static int  ft_print_form(char spec,va_list vf)
 		count += (ft_print_hexa(va_arg(vf, unsigned int), "0123456789ABCDEF"));
 	else if (spec == 'p')
 		count += (ft_print_ptr(va_arg(vf, unsigned long)));
+	else if (spec == '%')
+		count += ft_print_char('%');
 	else
-		count += (ft_print_char(va_arg(vf, int)));
+		count += (ft_print_char('%') + ft_print_char(spec));
 	return (count);
 }
 
-
-int ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
 	va_list	vf;
 	int		count_len;
 
-	if (!format || write(1, "", 0) == -1)
+	if (!format)
 		return (-1);
 	va_start(vf, format);
 	count_len = 0;
@@ -56,6 +57,8 @@ int ft_printf(const char *format, ...)
 			return (-1);
 		format++;
 	}
+	if (write(1, "", 0) == -1)
+		count_len *= -1;
 	va_end(vf);
-	return(count_len);
+	return (count_len);
 }
