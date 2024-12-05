@@ -6,13 +6,13 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 13:56:00 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/05 13:57:12 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/05 17:00:07 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_print_char(int c)
+int	ft_print_char(int c)
 {
-	write(1, &c, 1);
+	return (write(1, &c, 1));
 }
