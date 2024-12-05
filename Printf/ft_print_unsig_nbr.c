@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:10:06 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/05 14:12:47 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/05 16:41:22 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_print_unsig_nbr(unsigned int n)
 {
-    int	count;
+	int	count;
 
 	count = 0;
 	if (n >= 10)
