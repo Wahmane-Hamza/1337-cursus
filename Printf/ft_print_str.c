@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:01:32 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/05 14:03:49 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/05 16:40:01 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_print_str(char *str)
 {
-    int	count;
+	int	count;
 
 	count = 0;
 	if (!str)
