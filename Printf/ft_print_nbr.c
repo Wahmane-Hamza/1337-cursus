@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 14:03:37 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/05 14:09:53 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/05 16:41:03 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_print_nbr(int nbr)
 {
-    long	n;
+	long	n;
 	int		count;
 
 	n = nbr;
