@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 11:47:22 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/05 19:54:03 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/06 17:09:58 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int	ft_printf(const char *format, ...)
 	va_list	vf;
 	int		count_len;
 
-	if (!format)
+	if (!format || write(1, "", 0) == -1)
 		return (-1);
 	va_start(vf, format);
 	count_len = 0;
@@ -57,8 +57,6 @@ int	ft_printf(const char *format, ...)
 			return (-1);
 		format++;
 	}
-	if (write(1, "", 0) == -1)
-		count_len *= -1;
 	va_end(vf);
 	return (count_len);
 }
