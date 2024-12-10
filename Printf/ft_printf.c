@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 11:47:22 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/06 17:09:58 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/06 19:29:09 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	ft_print_form(char spec, va_list vf)
 	else if (spec == 'X')
 		count += (ft_print_hexa(va_arg(vf, unsigned int), "0123456789ABCDEF"));
 	else if (spec == 'p')
-		count += (ft_print_ptr(va_arg(vf, unsigned long)));
+		count += (ft_print_ptr(va_arg(vf, void *)));
 	else if (spec == '%')
 		count += ft_print_char('%');
 	else
@@ -60,3 +60,4 @@ int	ft_printf(const char *format, ...)
 	va_end(vf);
 	return (count_len);
 }
+
