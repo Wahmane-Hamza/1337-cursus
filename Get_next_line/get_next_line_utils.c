@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:35:11 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/11 14:23:36 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/11 16:19:08 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,11 @@ char	*ft_strjoin(char *stack, char *buffer)
 	i = -1;
 	str = malloc(stack_len + buffer_len + 1);
 	if (!str)
-		return (free(stack), free(buffer), NULL);
+		return (free(stack), NULL);
 	if (!stack)
 		stack = malloc(1);
 	if (!stack)
-		return (free(str), free(buffer), NULL);
+		return (free(str), NULL);
 	while (++i < stack_len)
 		str[i] = stack[i];
 	str[i] = '\0';
@@ -65,7 +65,7 @@ char	*ft_strjoin(char *stack, char *buffer)
 	while (++j < buffer_len)
 		str[i + j] = buffer[j];
 	str[i + j] = '\0';
-	return (free(stack), free(buffer), str);
+	return (free(stack), str);
 }
 
 int	before_n_stack(char *stack)
