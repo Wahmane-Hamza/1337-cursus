@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:35:11 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/11 11:44:16 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/11 14:23:36 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,22 +24,20 @@ size_t	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strchr(const char *s, int c)
+int ft_strchr(const char *s, int c)
 {
-	unsigned char	c2;
 	int				i;
 
-	c2 = (unsigned char)c;
+    if (!s)
+		return (0);
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c2)
-			return ((char *)(&s[i]));
+		if (s[i] == c)
+			return (1);
 		i++;
 	}
-	if ((char)c == '\n')
-		return ((char *)(&s[i]));
-	return (NULL);
+	return (0);
 }
 
 char	*ft_strjoin(char *stack, char *buffer)
@@ -68,4 +66,34 @@ char	*ft_strjoin(char *stack, char *buffer)
 		str[i + j] = buffer[j];
 	str[i + j] = '\0';
 	return (free(stack), free(buffer), str);
+}
+
+int	before_n_stack(char *stack)
+{
+	int	i;
+
+	i = 0;
+	while (stack[i] != '\n' && stack[i] != '\0')
+		i++;
+	return (i);
+}
+
+int	after_n_stack(char *stack, int i)
+{
+	int j;
+
+	j = 0;
+	while (stack[i])
+	{
+		i++;
+		j++;
+	}
+	return (j);
+}
+
+char	*ft_check(int i, char *buffer, char *stack)
+{
+	if (i == 0)
+		return (free (buffer), stack);
+	return (free (buffer), free (stack), NULL);
 }
