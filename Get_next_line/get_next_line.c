@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:17:56 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/11 14:24:01 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/11 16:30:49 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,25 @@ char    *new_n(char *stack)
     char    *cup;
 
     len_before_n = before_n_stack(stack);
-    if (len_before_n == '\0')
-        
-    len_after_n = after_n_stack(stack,len_before_n);
-    cup = malloc(len_after_n + 1);
-    if (!cup)
-        return (free(stack), NULL);
-    i = 0;
-    while (stack[len_before_n])
+    if (stack[len_before_n] == '\0')
+        return (free (stack), NULL);
+    if(stack[len_before_n + 1] != '\0')
     {
-        cup[i] = stack[len_before_n];
-        len_before_n++;
-        i++;
+        len_after_n = after_n_stack(stack,len_before_n + 1);
+        cup = malloc(len_after_n + 1);
+        if (!cup)
+            return (free(stack), NULL);
+        i = 0;
+        while (stack[len_before_n + 1])
+        {
+            len_before_n++;
+            cup[i] = stack[len_before_n];
+            i++;
+        }
+        cup[i] = '\0';
+        return (free(stack), cup);
     }
-    cup[i] = '\0';
-    return (free(stack), cup);
+    return (free(stack), NULL);
 }
 
 char    *the_line(char *stack)
@@ -65,12 +69,12 @@ char    *get_n(char *stack, int fd)
 {
     int i;
     char        *buffer;
-
+    
+    buffer = malloc((size_t)BUFFER_SIZE + 1);
+    if (!buffer)
+        return (free(stack), NULL);
     while (ft_strchr(stack,'\n') != 1)
     {
-        buffer = malloc((size_t)BUFFER_SIZE + 1);
-        if (!buffer)
-            return (free(stack), NULL);
         i = read(fd, buffer, BUFFER_SIZE);
         if (i <= 0)
 		{
@@ -80,8 +84,12 @@ char    *get_n(char *stack, int fd)
         buffer[i] = '\0';
         stack = ft_strjoin(stack, buffer);
         if (!stack)
+        {
+            free(buffer);
 			return (NULL);
+        }
     }
+    free(buffer);
     return (stack);
 }
 
@@ -94,10 +102,9 @@ char *get_next_line(int fd)
         return (NULL);
 
     stack = get_n(stack , fd);
-    if (!stack)
+        if (!stack)
 		return (free(stack), NULL);
     line = the_line(stack);
     stack = new_n(stack);
-    printf("\nstack: %s \n",stack);
     return (line);
 }
