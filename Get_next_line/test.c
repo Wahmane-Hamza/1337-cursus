@@ -3,8 +3,16 @@ int main()
 {
 
     int fd = open("test.txt", O_CREAT | O_RDWR, 0644);
-    printf("one : %s \n",get_next_line(fd));
-    printf("two :%s",get_next_line(fd));
-    printf("three :%s",get_next_line(fd));
+    char *str = get_next_line(fd);
+    printf("one : %s",str);
+    char *str2 = get_next_line(fd);
 
+    printf("two :%s",str2);
+    char *str3 = get_next_line(fd);
+
+    printf("three :%s",str3);
+
+    free(str);
+    free(str2);
+    free(str3);
 }
