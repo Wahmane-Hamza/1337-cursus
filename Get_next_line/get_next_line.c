@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:17:56 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/11 16:30:49 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/11 17:08:47 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char    *new_n(char *stack)
 {
-    int i;
-    int len_before_n;
-    int len_after_n;
-    char    *cup;
+    int     i;
+    int     len_before_n;
+    int     len_after_n;
+    char    *cup;   
 
     len_before_n = before_n_stack(stack);
     if (stack[len_before_n] == '\0')
@@ -67,7 +67,7 @@ char    *the_line(char *stack)
 
 char    *get_n(char *stack, int fd)
 {
-    int i;
+    ssize_t      i;
     char        *buffer;
     
     buffer = malloc((size_t)BUFFER_SIZE + 1);
@@ -102,7 +102,7 @@ char *get_next_line(int fd)
         return (NULL);
 
     stack = get_n(stack , fd);
-        if (!stack)
+    if (!stack)
 		return (free(stack), NULL);
     line = the_line(stack);
     stack = new_n(stack);
