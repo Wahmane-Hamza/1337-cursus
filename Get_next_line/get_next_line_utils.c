@@ -6,27 +6,17 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:35:11 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/12 14:34:48 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/12 18:14:04 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(char *str)
+int	ft_strchr(const char *s, int c)
 {
-	size_t	i;
+	int	i;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-int ft_strchr(const char *s, int c)
-{
-	int				i;
-
-    if (!s)
+	if (!s)
 		return (0);
 	i = 0;
 	while (s[i])
@@ -41,7 +31,7 @@ int ft_strchr(const char *s, int c)
 char	*ft_strdup(char *s1)
 {
 	char	*dst;
-	size_t  i;
+	size_t	i;
 
 	dst = (char *)malloc(ft_strlen(s1) + 1);
 	if (!dst)
@@ -52,7 +42,6 @@ char	*ft_strdup(char *s1)
 		dst[i] = s1[i];
 		i++;
 	}
-
 	dst[i] = '\0';
 	return (dst);
 }
@@ -60,7 +49,7 @@ char	*ft_strdup(char *s1)
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*dst;
-	size_t 	i;
+	size_t	i;
 	size_t	size;
 
 	if (s1 && !s2)
@@ -94,7 +83,7 @@ int	before_n_stack(char *stack)
 
 int	after_n_stack(char *stack, int i)
 {
-	int j;
+	int	j;
 
 	j = 0;
 	while (stack[i])
