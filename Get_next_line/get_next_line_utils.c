@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:35:11 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/11 16:19:08 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/12 14:34:48 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlen(char *str)
 	size_t	i;
 
 	i = 0;
-	if (!str)
-		return (0);
 	while (str[i])
 		i++;
 	return (i);
@@ -40,32 +38,48 @@ int ft_strchr(const char *s, int c)
 	return (0);
 }
 
-char	*ft_strjoin(char *stack, char *buffer)
+char	*ft_strdup(char *s1)
 {
-	char	*str;
-	size_t	j;
-	size_t	i;
-	size_t	stack_len;
-	size_t	buffer_len;
+	char	*dst;
+	size_t  i;
 
-	stack_len = ft_strlen(stack);
-	buffer_len = ft_strlen(buffer);
-	i = -1;
-	str = malloc(stack_len + buffer_len + 1);
-	if (!str)
-		return (free(stack), NULL);
-	if (!stack)
-		stack = malloc(1);
-	if (!stack)
-		return (free(str), NULL);
-	while (++i < stack_len)
-		str[i] = stack[i];
-	str[i] = '\0';
-	j = -1;
-	while (++j < buffer_len)
-		str[i + j] = buffer[j];
-	str[i + j] = '\0';
-	return (free(stack), str);
+	dst = (char *)malloc(ft_strlen(s1) + 1);
+	if (!dst)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		dst[i] = s1[i];
+		i++;
+	}
+
+	dst[i] = '\0';
+	return (dst);
+}
+
+char	*ft_strjoin(char *s1, char *s2)
+{
+	char	*dst;
+	size_t 	i;
+	size_t	size;
+
+	if (s1 && !s2)
+		return (ft_strdup(s1));
+	if (!s1 && s2)
+		return (ft_strdup(s2));
+	if (!s1 && !s2)
+		return (ft_strdup(""));
+	size = ft_strlen(s1) + ft_strlen(s2) + 1;
+	dst = malloc(size);
+	if (!dst)
+		return (NULL);
+	i = 0;
+	while (*s1)
+		dst[i++] = *s1++;
+	while (*s2)
+		dst[i++] = *s2++;
+	dst[i] = '\0';
+	return (dst);
 }
 
 int	before_n_stack(char *stack)
@@ -89,11 +103,4 @@ int	after_n_stack(char *stack, int i)
 		j++;
 	}
 	return (j);
-}
-
-char	*ft_check(int i, char *buffer, char *stack)
-{
-	if (i == 0)
-		return (free (buffer), stack);
-	return (free (buffer), free (stack), NULL);
 }
