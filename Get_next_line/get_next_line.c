@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:17:56 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/11 17:08:47 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/12 14:45:56 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char    *new_n(char *stack)
         cup[i] = '\0';
         return (free(stack), cup);
     }
-    return (free(stack), NULL);
+    return (free(stack),NULL);
 }
 
 char    *the_line(char *stack)
@@ -69,25 +69,26 @@ char    *get_n(char *stack, int fd)
 {
     ssize_t      i;
     char        *buffer;
-    
+    char        *temp;
+
     buffer = malloc((size_t)BUFFER_SIZE + 1);
     if (!buffer)
-        return (free(stack), NULL);
+        return (NULL);
     while (ft_strchr(stack,'\n') != 1)
     {
         i = read(fd, buffer, BUFFER_SIZE);
         if (i <= 0)
 		{
-			stack = ft_check(i, buffer, stack);
-			break ;
+            if (i == 0)
+                return (free (buffer), stack);
+            return (free (buffer), NULL);
 		}
         buffer[i] = '\0';
+        temp = stack;
         stack = ft_strjoin(stack, buffer);
+        free(temp);
         if (!stack)
-        {
-            free(buffer);
-			return (NULL);
-        }
+			return (free(buffer),free(stack),NULL);
     }
     free(buffer);
     return (stack);
