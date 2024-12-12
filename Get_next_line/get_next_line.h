@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:35:35 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/12 14:47:03 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/12 16:12:41 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stdio.h>
 
 # ifndef BUFFER_SIZE
-# define BUFFER_SIZE 1000
+# define BUFFER_SIZE 0
 # endif
 
 char	*get_next_line(int fd);
