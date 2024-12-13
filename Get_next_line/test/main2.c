@@ -41,7 +41,7 @@ int main(int argc, char **argv)
         free(line);
     }
 
-    printf("Reading lines from: %s\n", argv[1]);
+    printf("Reading lines from: %s\n", argv[2]);
     while ((line = get_next_line(fd2)))
     {
         printf("%s", line);
