@@ -6,7 +6,7 @@
 /*   By: hwahmane <hwahmane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 16:14:53 by hwahmane          #+#    #+#             */
-/*   Updated: 2024/12/12 18:13:52 by hwahmane         ###   ########.fr       */
+/*   Updated: 2024/12/13 13:20:36 by hwahmane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ char	*get_next_line(int fd)
 	static char	*stack[1024];
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= 1024)
 		return (NULL);
 	stack[fd] = get_n(stack[fd], fd);
 	if (!stack[fd])
